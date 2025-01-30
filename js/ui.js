@@ -50,7 +50,10 @@ const ui = {
         //criando botoes de editar e apagar
         const botao_editar = document.createElement('button')
         botao_editar.classList.add('botao-editar')
-        botao_editar.onclick = () => ui.preencherFormulario(pensamento.id)
+        botao_editar.onclick = () => {
+            document.getElementById("form-container").scrollIntoView({ behavior: "smooth" })
+            ui.preencherFormulario(pensamento.id)
+        }
 
         const icone_editar = document.createElement('img')
         icone_editar.src = "assets/imagens/icone-editar.png"
